@@ -3,7 +3,7 @@
 ![render_kitti](doc/render_kitti.gif)
 ![render_euroc](doc/render_euroc.gif)
 
-This is the code for the 2019 BMVC paper **Matching Features without Descriptors: Implicitly Matched Interest Points** by Titus Cieslewski, Michael Bloesch and Davide Scaramuzza. When using this, please cite:
+This is the code for the 2019 BMVC paper **Matching Features without Descriptors: Implicitly Matched Interest Points** ([PDF](http://rpg.ifi.uzh.ch/docs/BMVC19_Cieslewski.pdf)) by [Titus Cieslewski](http://rpg.ifi.uzh.ch/people_titus.html), Michael Bloesch and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html). When using this, please cite:
 
 ```bib
 @InProceedings{Cieslewski19bmvc,
@@ -14,6 +14,10 @@ This is the code for the 2019 BMVC paper **Matching Features without Descriptors
   year          = 2019
 }
 ```
+
+## Supplementary Material
+
+The supplementary material mentioned in the paper can be found at http://rpg.ifi.uzh.ch/datasets/imips/supp_imips.zip .
 
 ## Installation
 
