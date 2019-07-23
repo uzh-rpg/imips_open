@@ -1,0 +1,12 @@
+hpatches
+kitti
+robotcar
+*.pyc
+setup.bash
+*.profile
+checkpoints
+channel_outs_*
+min_hpatches
+.idea
+compress
+debug_out.png
