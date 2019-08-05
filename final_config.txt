@@ -19,14 +19,14 @@
 # You should have received a copy of the GNU General Public License
 # along with imips_open. If not, see <http:#www.gnu.org/licenses/>.
 
-ROBOT: --tds=tm --ds=kt --depth=14 --ol=0.3 --val_best
-HP: --val_best
+ROBOT: --val_best
+HP: --tds=hp --ds=hp --depth=12 --val_best
 
 # Figure 3:
-python plot_match_distrib.py --tds=tm --ds=kt --depth=14 --ol=0.3 --val_best --testing --baseline=all
-python plot_match_distrib.py --tds=tm --ds=kt --eds=eu --depth=14 --ol=0.3 --val_best --testing --baseline=all
+python plot_match_distrib.py --val_best --testing --baseline=all
+python plot_match_distrib.py --eds=eu --val_best --testing --baseline=all
 python plot_match_distrib.py --val_best --testing --baseline=all
 
 # Figure 5 c, d:
-python plot_size_v_perf.py --tds=tm --ds=kt --depth=14 --ol=0.3 --val_best --testing --baseline=all
-python plot_size_v_perf.py --tds=tm --ds=kt --eds=eu --depth=14 --ol=0.3 --val_best --testing --baseline=all
+python plot_size_v_perf.py --val_best --testing --baseline=all
+python plot_size_v_perf.py --eds=eu --val_best --testing --baseline=all

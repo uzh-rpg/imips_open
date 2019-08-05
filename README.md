@@ -54,11 +54,20 @@ Download the weights from http://rpg.ifi.uzh.ch/datasets/imips/tds=tm_ds=kt_d=14
 
 ## Inference
 
+### Infer any image folder
+
+```bash
+python infer_folder.py --in_dir=INPUT_DIR [--out_dir=OUTPUT_DIR] [--ext=.EXTENSION]
+```
+
+If no output directory is provided, it will be `$HOME/imips_out/INPUT_DIR`.
+`ext` can be used to specify image extensions other than `.jpg` or `.png` (add the dot).
+
 ### Test using our data
 
 Follow [these instructions](https://github.com/uzh-rpg/imips_open_deps/tree/master/rpg_datasets_py) to link up KITTI. To speed things up, you can download http://rpg.ifi.uzh.ch/datasets/imips/tracked_indices.zip and extract the contained files to `python/imips/tracked indices` (visual overlap precalculation). Then, run:
 ```bash
-python render_matching.py --tds=tm --ds=kt --depth=14 --ol=0.3 --val_best --testing
+python render_matching.py --val_best --testing
 ```
 This will populate `results/match_render/tds=tm_ds=kt_d=14_ol=0.30_kt_testing` with images like the following:
 
@@ -68,15 +77,15 @@ This will populate `results/match_render/tds=tm_ds=kt_d=14_ol=0.30_kt_testing` w
 
 (Re)move the previously downloaded checkpoints. Follow [these instructions](https://github.com/uzh-rpg/imips_open_deps/tree/master/rpg_datasets_py) to link up TUM mono. Then, run:
 ```bash
-python train.py --tds=tm --ds=kt --depth=14 --ol=0.3
+python train.py
 ```
 
 To visualize training progress, you can run:
 ```bash
-python plot_val_metrics.py --tds=tm --ds=kt --depth=14 --ol=0.3
+python plot_val_metrics.py
 ```
 in parallel. Here is what it should look like after around 60k iterations:
 
 ![plot_val_metrics](doc/plot_val_metrics.png)
 
-Note that inlier counts drop initially. This is normal.
+Note that inlier counts drop initially. This is normal. With some initializations, the training seems to fail, you might need to give it some attempts. You can use the `rr` flag to change the seed.

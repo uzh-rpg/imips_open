@@ -30,22 +30,22 @@ flags.DEFINE_bool('dsup', False, 'Discriminative suppression?')
 
 # Net config (general)
 flags.DEFINE_integer('lr', 6, 'Negative log learning rate.')
-flags.DEFINE_integer('depth', 12, 'NN depth.')
+flags.DEFINE_integer('depth', 14, 'NN depth.')
 flags.DEFINE_integer('chan', 128, 'Output channel count.')
 flags.DEFINE_integer('rr', 0, 'Random roll id (does not affect execution).')
 flags.DEFINE_bool('use_qn', False, 'Use QuadNets loss?')
 flags.DEFINE_float('corr_w', 1., 'Correspondence loss weight.')
 # Train config.
-flags.DEFINE_string('tds', 'hp', 'Training dataset (kt, rc, tm, en)')
+flags.DEFINE_string('tds', 'tm', 'Training dataset (hp, kt, rc, tm, en)')
 flags.DEFINE_string('pck', 'tr', 'Pair pick method (gt, tr, tt)')
-flags.DEFINE_float('ol', 0.5, 'KLT overlap between picked frames')
+flags.DEFINE_float('ol', 0.3, 'KLT overlap between picked frames')
 flags.DEFINE_float('aug_ang', 0.,
                    'Angle augmentation range (n*2pi) for HPatches')
 flags.DEFINE_float('aug_sc', 0., 'Scale augmentation range (2^n) for HPatches')
 
 # Evaluation parameters
-flags.DEFINE_string('ds', 'hp', 'Validation dataset (kt, hp)')
-flags.DEFINE_string('eds', '', 'Evaluation dataset (kt, hp), empty to use ds')
+flags.DEFINE_string('ds', 'kt', 'Validation dataset (kt, hp)')
+flags.DEFINE_string('eds', '', 'Evaluation dataset (eu), empty to use ds')
 flags.DEFINE_integer('k', 10, 'Amount of inliers to consider success')
 flags.DEFINE_string('baseline', '', 'Baseline to be used instead of NN')
 flags.DEFINE_integer('baseline_num_ips', 128, 
