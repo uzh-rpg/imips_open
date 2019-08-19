@@ -15,6 +15,8 @@ This is the code for the 2019 BMVC paper **Matching Features without Descriptors
 }
 ```
 
+If you are looking to minimize the amount of data necessary for feature matching, but still want to use descriptors, you might also be interested in our related work [**SIPs: Succinct Interest Points from Unsupervised Inlierness Probability Learning**](https://github.com/uzh-rpg/sips2_open).
+
 ## Supplementary Material
 
 The supplementary material mentioned in the paper can be found at http://rpg.ifi.uzh.ch/datasets/imips/supp_imips.zip .
