@@ -95,3 +95,7 @@ in parallel. Here is what it should look like after around 60k iterations:
 ![plot_val_metrics](doc/plot_val_metrics.png)
 
 Note that inlier counts drop initially. This is normal. With some initializations, the training seems to fail, you might need to give it some attempts. You can use the `rr` flag to change the seed.
+
+## Acknowledgments
+
+This work was supported by the National Centre of Competence in Research (NCCR) Robotics through the Swiss National Science Foundation and the SNSF-ERC Starting Grant. The Titan Xp used for this research was donated by the NVIDIA Corporation.
